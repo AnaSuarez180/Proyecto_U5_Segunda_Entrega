@@ -129,7 +129,12 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
 STATIC_URL = '/frontend/static/'
-STATICFILES_DIRS = [BASE_DIR / "/frontend/static/"]
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR / "frontend"),
+    # os.path.join(BASE_DIR, "static"),
+    os.path.join(BASE_DIR, "frontend", "static"),
+    ]
+STATIC_ROOT = os.path.join(BASE_DIR, r'\Users\sofia\Desktop\SILABUZ CLASES\SEMANA 10\PROYECTO FULLSTACK\static')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
